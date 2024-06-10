@@ -1,0 +1,3 @@
+namespace MWPhotoBrowserWrapper.MaciOS.Binding {
+
+}

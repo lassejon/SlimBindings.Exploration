@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+
+    <XcodeProject>$(MSBuildThisFileDirectory)../native/Original.xcodeproj</XcodeProject>
+    <!-- <XcodeBuildXCFramework>true</XcodeBuildXCFramework>
+    <ObjSharpieBind>true</ObjSharpieBind> -->
+    <ObjSharpieBindNamespace>OriginalNative</ObjSharpieBindNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <NativeReference Include="../native/.build/Original.xcframework">
+      <Kind>Framework</Kind>
+      <SmartLink>true</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\..\..\eng\Common.macios.targets" />
+</Project>

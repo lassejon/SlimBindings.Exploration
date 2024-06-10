@@ -10,7 +10,8 @@ import com.facebook.appevents.AppEventsLogger;
 
 public class FacebookSdk {
 
-    // See: https://developers.facebook.com/docs/app-events/getting-started-app-events-android/#log-manually
+    // See:
+    // https://developers.facebook.com/docs/app-events/getting-started-app-events-android/#log-manually
 
     static AppEventsLogger _logger;
 

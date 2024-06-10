@@ -16,8 +16,9 @@ namespace Microsoft.Maui.BindingExtensions.Build.Tasks
 
         public string JavaSdkDirectory { get; set; } = string.Empty;
 
-        public string Arguments { get; set; } = string.Empty;
+        public string ToolPath { get; set; } = string.Empty;
 
+        public string Arguments { get; set; } = string.Empty;
 
         public Gradle()
         {
@@ -33,6 +34,13 @@ namespace Microsoft.Maui.BindingExtensions.Build.Tasks
         protected override ProcessStartInfo GetProcessStartInfo(string pathToTool, string commandLineCommands, string responseFileSwitch)
         {
             ProcessStartInfo psi = base.GetProcessStartInfo(pathToTool, commandLineCommands, responseFileSwitch);
+            Console.WriteLine($"ProcessStartInfo: {psi}");
+            Console.WriteLine($"AndroidSdkDirectory: {AndroidSdkDirectory}");
+            Console.WriteLine($"JavaSdkDirectory: {JavaSdkDirectory}");
+            Console.WriteLine($"JAVA_HOME: {Environment.GetEnvironmentVariable("JAVA_HOME")}");
+            Console.WriteLine($"ANDROID_HOME: {Environment.GetEnvironmentVariable("ANDROID_HOME")}");
+            Console.WriteLine($"toolPath: {ToolPath}");
+
             if (Directory.Exists(AndroidSdkDirectory))
                 psi.Environment["ANDROID_HOME"] = AndroidSdkDirectory;
 
