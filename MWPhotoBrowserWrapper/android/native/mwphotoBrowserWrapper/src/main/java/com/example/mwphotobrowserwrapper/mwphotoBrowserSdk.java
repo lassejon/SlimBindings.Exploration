@@ -1,7 +1,7 @@
 package com.example.mwphotobrowserwrapper;
 
-public class mwphotoBrowserSdk {
-    public static int getItemCount() {
-        return 12;
+public class MWPhotoBrowserSdk {
+    public static String getPhotoPath(int index) {
+        return "file:///android_asset/" + index + ".jpg";
     }
 }

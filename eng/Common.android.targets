@@ -41,8 +41,6 @@
         Arguments="%(GradleProjectReference.ModuleName):assemble$(GradleProjectConfiguration)"
         WorkingDirectory="%(GradleProjectReference.FullPath)" >
     </Gradle>
-    <Message Text="Java SDK Directory some shit: $(JavaSdkDirectory)" Importance="High" />
-    <Message Text="JAVA_HOME system var some shit: $(JAVA_HOME)" Importance="High" />
 
     <ItemGroup>
       <AndroidLibrary Include="@(GradleProjectReference->'%(FullPath)/%(ModuleName)/build/outputs/aar/%(ModuleName)-$(GradleProjectConfiguration).aar')">

@@ -15,6 +15,7 @@ namespace Microsoft.Maui.BindingExtensions.Build.Tasks
         public string AndroidSdkDirectory { get; set; } = string.Empty;
 
         public string JavaSdkDirectory { get; set; } = string.Empty;
+        public string MyProperty { get; set; }
 
         public string ToolPath { get; set; } = string.Empty;
 
