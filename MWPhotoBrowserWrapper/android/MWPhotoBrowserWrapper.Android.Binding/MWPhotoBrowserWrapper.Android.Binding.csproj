@@ -5,13 +5,13 @@
     <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>MWPhotoBrowserWrapperAndroidBinding</RootNamespace>
+    <RootNamespace>MWPhotoBrowserWrapper.Android.Binding</RootNamespace>
     <AndroidGenerateResourceDesigner>false</AndroidGenerateResourceDesigner>
   </PropertyGroup>
 
   <ItemGroup>
     <GradleProjectReference Include="../native" >
-      <ModuleName>mwphotoBrowserWrapper</ModuleName>
+      <ModuleName>mwphotobrowser</ModuleName>
       <Bind>true</Bind>
       <Pack>true</Pack>
     </GradleProjectReference>

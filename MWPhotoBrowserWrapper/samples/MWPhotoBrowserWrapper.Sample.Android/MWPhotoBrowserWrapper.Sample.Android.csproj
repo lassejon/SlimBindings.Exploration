@@ -11,5 +11,13 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\android\MWPhotoBrowserWrapper.Android.Binding\MWPhotoBrowserWrapper.Android.Binding.csproj" />
+    <AndroidLibrary Include="..\..\android\native\mwphotobrowser\build\outputs\deps\*.jar">
+      <Bind>false</Bind>
+      <Visible>false</Visible>
+    </AndroidLibrary>
+    <!-- <AndroidLibrary Include="..\..\android\native\mwphotobrowser\build\outputs\deps\facebook-core*.aar">
+      <Bind>false</Bind>
+      <Visible>false</Visible>
+    </AndroidLibrary> -->
   </ItemGroup>
 </Project>
