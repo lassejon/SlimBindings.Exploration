@@ -1,7 +1,7 @@
 using System.Reflection;
 using Android.App;
 using Android.OS;
-using MWPhotoBrowserWrapper.Android.Binding;
+using MWPhotoBrowserWrapper.Library.Android;
 
 namespace MWPhotoBrowserWrapper.Sample.Android;
 
@@ -10,17 +10,12 @@ public class MainActivity : Activity
 {
     protected override void OnCreate(Bundle? savedInstanceState)
     {
-        var thread = new Thread(ThreadWork);
-        thread.Start();
+        var lib = new MWPhotoLib();
+
+        var x = lib.ItemCount();
         base.OnCreate(savedInstanceState);
 
         // Set our view from the "main" layout resource
         SetContentView(Resource.Layout.activity_main);
-    }
-
-    public static void ThreadWork()
-    {
-        var x = MWPhotoBrowserSdk.ItemCount;
-        Console.WriteLine(x);
     }
 }
